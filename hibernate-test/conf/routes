@@ -1,0 +1,11 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET   /                     controllers.DefaultController.index()
+GET  /new-student             controllers.DefaultController.newStudentForm()
+POST  /new-student             controllers.DefaultController.newStudent()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
